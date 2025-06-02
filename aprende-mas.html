@@ -50,53 +50,59 @@
     <h2>Actividades Interactivas</h2>
 
     <!-- Completa la palabra -->
-    <div class="actividad">
-      <h3>🔤 Completa la palabra</h3>
-      <p>A _ _ T _ _ _ D → <input type="text" id="word1" /></p>
-      <p>E _ _ _ _ A → <input type="text" id="word2" /></p>
-      <p>F _ _ _ _ _ _ D → <input type="text" id="word3" /></p>
-      <button onclick="verificarCompletarPalabra()">Verificar</button>
-      <div id="resultado-completar" class="resultado"></div>
-    </div>
+<div class="actividad">
+  <h3>🔤 Completa la palabra</h3>
+  <p>A _ _ T _ _ _ D → <input type="text" id="word1" /></p>
+  <p>E _ _ _ _ A → <input type="text" id="word2" /></p>
+  <p>F _ _ _ _ _ _ D → <input type="text" id="word3" /></p>
+  <small class="pista">Pista: Son habilidades sociales que ayudan a mejorar la convivencia y a expresar lo que sientes.</small>
+  <button onclick="verificarCompletarPalabra()">Verificar</button>
+  <div id="resultado-completar" class="resultado"></div>
+</div>
 
-    <!-- Une la frase con su valor -->
-    <div class="actividad">
-      <h3>🔗 Une la frase con su valor</h3>
-      <p>“Prefiero perder, pero no hacer trampa” <input type="text" id="valor1" /></p>
-      <p>“No me burlo de otros aunque lo hagan” <input type="text" id="valor2" /></p>
-      <p>“Ayudo sin esperar nada” <input type="text" id="valor3" /></p>
-      <button onclick="verificarValores()">Verificar</button>
-      <div id="resultado-valores" class="resultado"></div>
-    </div>
+<!-- Une la frase con su valor -->
+<div class="actividad">
+  <h3>🔗 Une la frase con su valor</h3>
+  <p>“Prefiero perder, pero no hacer trampa” <input type="text" id="valor1" /></p>
+  <p>“No me burlo de otros aunque lo hagan” <input type="text" id="valor2" /></p>
+  <p>“Ayudo sin esperar nada” <input type="text" id="valor3" /></p>
+  <small class="pista">Pista: Honestidad, respeto y solidaridad son valores básicos en la convivencia.</small>
+  <button onclick="verificarValores()">Verificar</button>
+  <div id="resultado-valores" class="resultado"></div>
+</div>
 
-    <!-- ¿Quién también es tu prójimo? -->
-    <div class="actividad">
-      <h3>✅ ¿Quién también es tu prójimo?</h3>
-      <label><input type="checkbox" id="amigo"> Mi mejor amigo</label><br>
-      <label><input type="checkbox" id="desconocido"> Un desconocido</label><br>
-      <label><input type="checkbox" id="diferente"> Alguien que piensa distinto a mí</label><br>
-      <label><input type="checkbox" id="solo-cae-bien"> Solo quien me cae bien</label><br>
-      <button onclick="verificarProximo()">Verificar</button>
-      <div id="resultado-proximo" class="resultado"></div>
-    </div>
+<!-- ¿Quién también es tu prójimo? -->
+<div class="actividad">
+  <h3>✅ ¿Quién también es tu prójimo?</h3>
+  <label><input type="checkbox" id="amigo"> Mi mejor amigo</label><br>
+  <label><input type="checkbox" id="desconocido"> Un desconocido</label><br>
+  <label><input type="checkbox" id="diferente"> Alguien que piensa distinto a mí</label><br>
+  <label><input type="checkbox" id="solo-cae-bien"> Solo quien me cae bien</label><br>
+  <small class="pista">Pista: Piensa en la definición de "prójimo" que compartimos al inicio.</small>
+  <button onclick="verificarProximo()">Verificar</button>
+  <div id="resultado-proximo" class="resultado"></div>
+</div>
 
-    <!-- Dónde es común la comunicación indirecta -->
-    <div class="actividad">
-      <h3>🌍 ¿Dónde es común la comunicación indirecta?</h3>
-      <input type="text" id="respuesta-cultura" placeholder="Escribe la respuesta..." />
-      <button onclick="verificarComunicacion()">Verificar</button>
-      <div id="resultado-cultura" class="resultado"></div>
-    </div>
+<!-- Dónde es común la comunicación indirecta -->
+<div class="actividad">
+  <h3>🌍 ¿Dónde es común la comunicación indirecta?</h3>
+  <input type="text" id="respuesta-cultura" placeholder="Escribe la respuesta..." />
+  <small class="pista">Pista: Es un país en Asia que valora mucho la cortesía y la comunicación indirecta.</small>
+  <button onclick="verificarComunicacion()">Verificar</button>
+  <div id="resultado-cultura" class="resultado"></div>
+</div>
 
-    <!-- Verdadero o falso -->
-    <div class="actividad">
-      <h3>💬 Verdadero o falso</h3>
-      <p>La fraternidad es ayudar solo si te lo piden. <input type="text" id="vf1" /></p>
-      <p>Fraternidad es construir con otros, no imponer. <input type="text" id="vf2" /></p>
-      <p>La empatía se trata de escuchar sin juzgar. <input type="text" id="vf3" /></p>
-      <button onclick="verificarVerdaderoFalso()">Verificar</button>
-      <div id="resultado-vf" class="resultado"></div>
-    </div>
+<!-- Verdadero o falso -->
+<div class="actividad">
+  <h3>💬 Verdadero o falso</h3>
+  <p>La fraternidad es ayudar solo si te lo piden. <input type="text" id="vf1" /></p>
+  <p>Fraternidad es construir con otros, no imponer. <input type="text" id="vf2" /></p>
+  <p>La empatía se trata de escuchar sin juzgar. <input type="text" id="vf3" /></p>
+  <small class="pista">Pista: Revisa los ejemplos de empatía, fraternidad y escucha activa.</small>
+  <button onclick="verificarVerdaderoFalso()">Verificar</button>
+  <div id="resultado-vf" class="resultado"></div>
+</div>
+
   </section>
 </main>
 
