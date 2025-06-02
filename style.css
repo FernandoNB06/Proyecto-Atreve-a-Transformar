@@ -18,7 +18,7 @@ a, button {
 
 /* Header */
 header {
-  background-image: url("imagen\ navbar.jpg");
+  background-image: url("imagen\\ navbar.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -201,6 +201,7 @@ main button:hover {
   line-height: 1.8;
 }
 
+/* Responsive ajustes */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -232,24 +233,17 @@ main button:hover {
   }
 }
 
-/* Galería de frases */
-.galeria-frases {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.galeria-frases h3 {
-  margin-bottom: 1em;
-  color: #007acc;
-}
-
-.galeria-imagenes {
+/* Galería */
+.galeria-imagenes,
+.galeria-carrusel {
+  margin: 2em auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5em;
 }
 
-.galeria-imagenes img {
+.galeria-imagenes img,
+.galeria-carrusel img {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -257,7 +251,8 @@ main button:hover {
   border: 2px solid #fff;
 }
 
-.galeria-imagenes img:hover {
+.galeria-imagenes img:hover,
+.galeria-carrusel img:hover {
   transform: scale(1.08);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -289,31 +284,53 @@ footer {
 
 /* Lightbox */
 .lightbox {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
-
+.lightbox.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
 .lightbox img {
   max-width: 90%;
   max-height: 80%;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.lightbox:target {
-  display: flex;
-  animation: fadeIn 0.3s ease;
+  pointer-events: none;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Materiales y recursos */
+.materiales-recursos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+.recurso-btn {
+  display: inline-block;
+  background-color: #007acc;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recurso-btn:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
 }

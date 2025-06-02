@@ -1,4 +1,4 @@
-// Desplazamiento suave en los enlaces internos (si quieres usar anclas en otras páginas)
+// Desplazamiento suave para enlaces internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
@@ -8,14 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Efecto de scroll reveal con clase fade-in-section
+// Efecto de fade-in para secciones
 const faders = document.querySelectorAll(".fade-in-section");
+const appearOptions = { threshold: 0.1 };
 
-const appearOptions = {
-  threshold: 0.1
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("visible");
@@ -27,8 +24,7 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-
-//
+// Navbar cambio de color al hacer scroll
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("nav");
   if (window.scrollY > 50) {
@@ -38,15 +34,29 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Lightbox para imágenes de la galería
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Para galería de frases
 document.querySelectorAll('.galeria-imagenes img').forEach(img => {
   img.addEventListener('click', e => {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
     lightboxImg.src = e.target.src;
-    lightbox.style.display = 'flex';
+    lightbox.classList.add('active');
   });
 });
 
-document.getElementById('lightbox').addEventListener('click', () => {
-  document.getElementById('lightbox').style.display = 'none';
+// Para galería carrusel
+document.querySelectorAll('.galeria-carrusel img').forEach(img => {
+  img.addEventListener('click', e => {
+    lightboxImg.src = e.target.src;
+    lightbox.classList.add('active');
+  });
+});
+
+// Cerrar lightbox haciendo clic en el fondo (no en la imagen)
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove('active');
+  }
 });

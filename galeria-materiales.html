@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galería y Materiales - Vínculos que Transforman</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="fade-in">
+      <h1>Galería y Materiales</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="justificacion.html">Justificación</a></li>
+      <li><a href="poblacion.html">Población</a></li>
+      <li><a href="objetivos-recursos.html">Objetivos y Recursos</a></li>
+      <li><a href="actividades.html">Actividades</a></li>
+      <li><a href="descripcion.html">Desarrollo</a></li>
+      <li><a href="galeria-materiales.html">Galería y Materiales</a></li>
+      <li><a href="aprende-mas.html">Aprende más</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="fade-in-section">
+      <h2>Frases y momentos del proyecto</h2>
+      <p>
+        Durante el proyecto, invitamos a estudiantes a escribir frases propias relacionadas con la asertividad, la empatía y la fraternidad. Aquí te mostramos las fotos de estos momentos.
+      </p>
+
+      <!-- Galería de fotos como carrusel -->
+      <div class="swiper galeria-carrusel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="enpatia1.jpg" alt="Folleto 1"></div>
+          <div class="swiper-slide"><img src="enpatia2.jpg" alt="Folleto 2"></div>
+          <div class="swiper-slide"><img src="enpatia3.jpg" alt="Folleto 3"></div>
+          <div class="swiper-slide"><img src="enpatia4.jpg" alt="Folleto 4"></div>
+          <div class="swiper-slide"><img src="enpatia5.jpg" alt="Folleto 5"></div>
+          <div class="swiper-slide"><img src="enpatia6.jpg" alt="Folleto 6"></div>
+          <div class="swiper-slide"><img src="enpatia7.jpg" alt="Folleto 7"></div>
+          <div class="swiper-slide"><img src="enpatia8.jpg" alt="Folleto 8"></div>
+          <div class="swiper-slide"><img src="enpatia9.jpg" alt="Folleto 9"></div>
+          <div class="swiper-slide"><img src="enpatia10.jpg" alt="Folleto 10"></div>
+        </div>
+        <!-- Flechas de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <h2>Material complementario y recursos digitales</h2>
+      <p>
+        Estos materiales complementan el proyecto y están disponibles para descarga directa o visualización.
+      </p>
+
+      <div class="materiales-recursos">
+        <a href="Tríptico sobre la empatía.pdf" download class="recurso-btn"><i class="fas fa-file-pdf"></i> Descargar tríptico sobre la empatía</a>
+        <a href="Infografía sobre la asertividad.pdf" download class="recurso-btn"><i class="fas fa-file-pdf"></i> Descargar infografía sobre la asertividad</a>
+        <a href="Folleto Tríptico sobre la fraternidad.pdf" download class="recurso-btn"><i class="fas fa-file-pdf"></i> Descargar tríptico sobre la fraternidad</a>
+        <a href="https://view.genially.com/683d25e3d217af363e6c8174/presentation-sabes-decir-lo-que-piensas-sin-pelear" target="_blank" class="recurso-btn"><i class="fas fa-external-link-alt"></i> Ver presentación interactiva (Genially)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Proyecto de Alan y Fernando</p>
+  </footer>
+
+  <!-- Lightbox para imágenes -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
+  <script src="js/script.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.galeria-carrusel', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+</body>
+</html>
