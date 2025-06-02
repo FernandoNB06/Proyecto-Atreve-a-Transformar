@@ -37,3 +37,16 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+document.querySelectorAll('.galeria-imagenes img').forEach(img => {
+  img.addEventListener('click', e => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = e.target.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+document.getElementById('lightbox').addEventListener('click', () => {
+  document.getElementById('lightbox').style.display = 'none';
+});
