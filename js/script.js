@@ -60,3 +60,28 @@ lightbox.addEventListener('click', (e) => {
     lightbox.classList.remove('active');
   }
 });
+
+
+// Acordeón para la sección "Aprende más"
+const acordeonBtns = document.querySelectorAll('.acordeon-btn');
+
+acordeonBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Cierra todos los acordeones menos el actual
+    acordeonBtns.forEach(b => {
+      if (b !== btn) {
+        b.classList.remove('active');
+        b.nextElementSibling.style.maxHeight = null;
+      }
+    });
+
+    // Activa/desactiva el acordeón actual
+    btn.classList.toggle('active');
+    const content = btn.nextElementSibling;
+    if (btn.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});

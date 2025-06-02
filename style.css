@@ -18,7 +18,7 @@ a, button {
 
 /* Header */
 header {
-  background-image: url("imagen\\ navbar.jpg");
+  background-image: url("imagen\ navbar.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -333,4 +333,84 @@ footer {
 .recurso-btn:hover {
   background-color: #005f99;
   transform: scale(1.05);
+}
+
+/* Acordeón en Aprende más */
+.acordeon {
+  margin-top: 2em;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.acordeon-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.acordeon-btn {
+  width: 100%;
+  text-align: left;
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.acordeon-btn:hover,
+.acordeon-btn.active {
+  background-color: #005f99;
+}
+
+.acordeon-content {
+  background-color: #f9f9f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1em;
+}
+
+.acordeon-content p {
+  margin: 1em 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.acordeon-btn::after {
+  content: '\25BC'; /* Flecha hacia abajo */
+  float: right;
+  transition: transform 0.3s;
+}
+
+.acordeon-btn.active::after {
+  transform: rotate(180deg); /* Flecha hacia arriba */
+}
+
+/* Mejora visual en pantallas pequeñas */
+@media (max-width: 600px) {
+  .acordeon-btn {
+    font-size: 0.95em;
+  }
+}
+.conclusion-bloque {
+  background-color: #eaf4fb;
+  border-left: 4px solid #007acc;
+  border-radius: 8px;
+  padding: 2em;
+  margin: 2em 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.conclusion-bloque h2 {
+  color: #007acc;
+  margin-bottom: 1em;
+}
+
+.conclusion-bloque h3 {
+  color: #005f99;
+  margin-top: 1.5em;
+  font-size: 1.2em;
 }

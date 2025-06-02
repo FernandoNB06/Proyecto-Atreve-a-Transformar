@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aprende más - Vínculos que Transforman</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <div class="fade-in">
+    <h1>Aprende más</h1>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="justificacion.html">Justificación</a></li>
+    <li><a href="poblacion.html">Población</a></li>
+    <li><a href="objetivos-recursos.html">Objetivos y Recursos</a></li>
+    <li><a href="actividades.html">Actividades</a></li>
+    <li><a href="descripcion.html">Desarrollo</a></li>
+    <li><a href="galeria-materiales.html">Galería y Materiales</a></li>
+    <li><a href="aprende-mas.html">Aprende más</a></li>
+    <li><a href="conclusion-compromisos.html">Conclusión</a></li>
+
+  </ul>
+</nav>
+
+<main>
+  <section class="fade-in-section">
+    <p>Explora estos conceptos clave que trabajamos durante el proyecto. Haz clic para desplegar cada uno y ver más detalles.</p>
+
+    <div class="acordeon">
+      <!-- Tarjeta 1 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">1️⃣ ¿Quién es mi prójimo?</button>
+        <div class="acordeon-content">
+          <p>¿Quién es tu prójimo? A veces lo más difícil es ver al otro… como un igual.</p>
+          <p><em>Actividad:</em> Imagen tipo mosaico con frases: “Él también tiene miedo”, “Ella también se esfuerza”...</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">2️⃣ Principios y valores</button>
+        <div class="acordeon-content">
+          <p>Juego de elección rápida: “¿Mentir para evitar un problema… o ser honesto aunque incomode?”</p>
+          <p>Mensaje final: <strong>“Tus decisiones reflejan tus valores. ¿Cuáles te definen a vos?”</strong></p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">3️⃣ Empatía</button>
+        <div class="acordeon-content">
+          <p>Mini historia animada o viñetas sobre la empatía y la importancia de escuchar sin juzgar.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">4️⃣ Asertividad</button>
+        <div class="acordeon-content">
+          <p>Simulador de respuesta donde eliges cómo reaccionar ante burla, presión o interrupciones.</p>
+          <p><em>Respuestas:</em> Pasiva, agresiva, asertiva.</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">5️⃣ Culturas y pueblos del mundo</button>
+        <div class="acordeon-content">
+          <p>Mapa interactivo con datos sobre la comunicación en diferentes culturas: Madagascar, Kenia, Albania...</p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="acordeon-item">
+        <button class="acordeon-btn">6️⃣ Fraternidad</button>
+        <div class="acordeon-content">
+          <p>Reto colaborativo: “3 maneras de trabajar con otros esta semana” (ayudar sin que te lo pidan, proponer ideas, colaborar).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 - Proyecto de Alan y Fernando</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+// Acordeón simple
+document.querySelectorAll('.acordeon-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    const content = btn.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
