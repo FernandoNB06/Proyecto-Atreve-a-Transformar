@@ -542,3 +542,58 @@ button.check-btn:hover {
   font-weight: bold;
   color: #333;
 }
+
+
+.imagen-poblacion img {
+  border: 3px solid rgba(0, 95, 153, 0.3); /* Un toque de azul claro */
+  border-radius: 8px;
+}
+.imagen-poblacion {
+  background: rgba(255, 255, 255, 0.7); /* Blanco translúcido */
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 2em auto;
+  text-align: center;
+}
+.imagen-descripcion {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+.imagen-poblacion img {
+  transition: transform 0.3s ease;
+}
+
+.imagen-poblacion img:hover {
+  transform: scale(1.03);
+}
+
+/* Estilo para imágenes en la vista Objetivos y Recursos */
+.imagen-objetivos, .imagen-recursos {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.imagen-objetivos img,
+.imagen-recursos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-objetivos img:hover,
+.imagen-recursos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-descripcion {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+  font-style: italic;
+}
