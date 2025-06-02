@@ -414,3 +414,131 @@ footer {
   margin-top: 1.5em;
   font-size: 1.2em;
 }
+
+
+/* Estilos generales para la vista "Aprende más" */
+.aprende-section {
+  margin-top: 2em;
+}
+
+.aprende-section h3 {
+  color: #005f99;
+  margin-bottom: 0.5em;
+}
+
+.aprende-section p {
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+.aprende-section ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.aprende-section li {
+  margin-bottom: 0.5em;
+}
+
+input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+  font-size: 1em;
+}
+
+button.check-btn {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 0.5em;
+}
+
+button.check-btn:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
+}
+
+.resultado {
+  margin-top: 0.5em;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.resultado.correcto {
+  color: green;
+}
+
+.resultado.incorrecto {
+  color: red;
+}
+
+/* Responsive para inputs y botones */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+}
+/* Estilos específicos para la vista "Aprende más" */
+
+.actividad {
+  background-color: #eaf4fb;
+  border-left: 4px solid #007acc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1.5em 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.actividad h3 {
+  color: #005f99;
+  margin-top: 0;
+}
+
+.actividad p {
+  margin: 0.5em 0;
+}
+
+.actividad input[type="text"],
+.actividad select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-left: 0.5em;
+}
+
+.actividad button {
+  display: inline-block;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.8em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.actividad button:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
+}
+
+#resultado-completar,
+#resultado-valores,
+#resultado-proximo,
+#resultado-comunicacion,
+#resultado-vf {
+  margin-top: 0.5em;
+  font-weight: bold;
+  color: #333;
+}

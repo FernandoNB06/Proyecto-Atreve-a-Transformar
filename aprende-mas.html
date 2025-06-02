@@ -19,71 +19,81 @@
     <li><a href="index.html">Inicio</a></li>
     <li><a href="justificacion.html">Justificación</a></li>
     <li><a href="poblacion.html">Población</a></li>
-    <li><a href="objetivos-recursos.html">Objetivos y Recursos</a></li>
+    <li><a href="objetivos-recursos.html">Objetivos</a></li>
     <li><a href="actividades.html">Actividades</a></li>
     <li><a href="descripcion.html">Desarrollo</a></li>
-    <li><a href="galeria-materiales.html">Galería y Materiales</a></li>
+    <li><a href="galeria-materiales.html">Galería</a></li>
     <li><a href="aprende-mas.html">Aprende más</a></li>
-    <li><a href="conclusion-compromisos.html">Conclusión</a></li>
-
   </ul>
 </nav>
 
 <main>
   <section class="fade-in-section">
-    <p>Explora estos conceptos clave que trabajamos durante el proyecto. Haz clic para desplegar cada uno y ver más detalles.</p>
+    <h2>Introducción</h2>
+    <p>Esta sección fue pensada para que explores, de manera simple y concreta, los temas principales del proyecto.</p>
+    <p>Aquí no vas a encontrar definiciones largas ni palabras difíciles, sino ejemplos reales y cotidianos que te pueden ayudar a entender mejor cómo se aplican la asertividad, la empatía, la fraternidad, el respeto por las culturas, los valores y el reconocimiento del otro en tu día a día.</p>
+  </section>
 
-    <div class="acordeon">
-      <!-- Tarjeta 1 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">1️⃣ ¿Quién es mi prójimo?</button>
-        <div class="acordeon-content">
-          <p>¿Quién es tu prójimo? A veces lo más difícil es ver al otro… como un igual.</p>
-          <p><em>Actividad:</em> Imagen tipo mosaico con frases: “Él también tiene miedo”, “Ella también se esfuerza”...</p>
-        </div>
-      </div>
+  <section class="fade-in-section">
+    <h2>Conceptos con ejemplos</h2>
+    <p><strong>Asertividad:</strong> Cuando alguien te interrumpe y tú dices: "¿Puedo terminar de hablar y luego te escucho?"</p>
+    <p><strong>Empatía:</strong> Ves a alguien callado en clase y preguntas: "¿Estás bien? ¿Quieres hablar?"</p>
+    <p><strong>Fraternidad:</strong> En vez de hacer todo solo, decidís trabajar con tu grupo.</p>
+    <p><strong>El prójimo:</strong> No solo es tu amigo, también lo es un desconocido.</p>
+    <p><strong>Principios y valores:</strong> Elegís no copiar en un examen, aunque todos lo hagan.</p>
+    <p><strong>Culturas:</strong> En Kenia, primero se saluda con calma antes de hablar de cualquier tema.</p>
+  </section>
 
-      <!-- Tarjeta 2 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">2️⃣ Principios y valores</button>
-        <div class="acordeon-content">
-          <p>Juego de elección rápida: “¿Mentir para evitar un problema… o ser honesto aunque incomode?”</p>
-          <p>Mensaje final: <strong>“Tus decisiones reflejan tus valores. ¿Cuáles te definen a vos?”</strong></p>
-        </div>
-      </div>
+  <section class="fade-in-section">
+    <h2>Actividades Interactivas</h2>
 
-      <!-- Tarjeta 3 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">3️⃣ Empatía</button>
-        <div class="acordeon-content">
-          <p>Mini historia animada o viñetas sobre la empatía y la importancia de escuchar sin juzgar.</p>
-        </div>
-      </div>
+    <!-- Completa la palabra -->
+    <div class="actividad">
+      <h3>🔤 Completa la palabra</h3>
+      <p>A _ _ T _ _ _ D → <input type="text" id="word1" /></p>
+      <p>E _ _ _ _ A → <input type="text" id="word2" /></p>
+      <p>F _ _ _ _ _ _ D → <input type="text" id="word3" /></p>
+      <button onclick="verificarCompletarPalabra()">Verificar</button>
+      <div id="resultado-completar" class="resultado"></div>
+    </div>
 
-      <!-- Tarjeta 4 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">4️⃣ Asertividad</button>
-        <div class="acordeon-content">
-          <p>Simulador de respuesta donde eliges cómo reaccionar ante burla, presión o interrupciones.</p>
-          <p><em>Respuestas:</em> Pasiva, agresiva, asertiva.</p>
-        </div>
-      </div>
+    <!-- Une la frase con su valor -->
+    <div class="actividad">
+      <h3>🔗 Une la frase con su valor</h3>
+      <p>“Prefiero perder, pero no hacer trampa” <input type="text" id="valor1" /></p>
+      <p>“No me burlo de otros aunque lo hagan” <input type="text" id="valor2" /></p>
+      <p>“Ayudo sin esperar nada” <input type="text" id="valor3" /></p>
+      <button onclick="verificarValores()">Verificar</button>
+      <div id="resultado-valores" class="resultado"></div>
+    </div>
 
-      <!-- Tarjeta 5 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">5️⃣ Culturas y pueblos del mundo</button>
-        <div class="acordeon-content">
-          <p>Mapa interactivo con datos sobre la comunicación en diferentes culturas: Madagascar, Kenia, Albania...</p>
-        </div>
-      </div>
+    <!-- ¿Quién también es tu prójimo? -->
+    <div class="actividad">
+      <h3>✅ ¿Quién también es tu prójimo?</h3>
+      <label><input type="checkbox" id="amigo"> Mi mejor amigo</label><br>
+      <label><input type="checkbox" id="desconocido"> Un desconocido</label><br>
+      <label><input type="checkbox" id="diferente"> Alguien que piensa distinto a mí</label><br>
+      <label><input type="checkbox" id="solo-cae-bien"> Solo quien me cae bien</label><br>
+      <button onclick="verificarProximo()">Verificar</button>
+      <div id="resultado-proximo" class="resultado"></div>
+    </div>
 
-      <!-- Tarjeta 6 -->
-      <div class="acordeon-item">
-        <button class="acordeon-btn">6️⃣ Fraternidad</button>
-        <div class="acordeon-content">
-          <p>Reto colaborativo: “3 maneras de trabajar con otros esta semana” (ayudar sin que te lo pidan, proponer ideas, colaborar).</p>
-        </div>
-      </div>
+    <!-- Dónde es común la comunicación indirecta -->
+    <div class="actividad">
+      <h3>🌍 ¿Dónde es común la comunicación indirecta?</h3>
+      <input type="text" id="respuesta-cultura" placeholder="Escribe la respuesta..." />
+      <button onclick="verificarComunicacion()">Verificar</button>
+      <div id="resultado-cultura" class="resultado"></div>
+    </div>
+
+    <!-- Verdadero o falso -->
+    <div class="actividad">
+      <h3>💬 Verdadero o falso</h3>
+      <p>La fraternidad es ayudar solo si te lo piden. <input type="text" id="vf1" /></p>
+      <p>Fraternidad es construir con otros, no imponer. <input type="text" id="vf2" /></p>
+      <p>La empatía se trata de escuchar sin juzgar. <input type="text" id="vf3" /></p>
+      <button onclick="verificarVerdaderoFalso()">Verificar</button>
+      <div id="resultado-vf" class="resultado"></div>
     </div>
   </section>
 </main>
@@ -92,20 +102,60 @@
   <p>&copy; 2025 - Proyecto de Alan y Fernando</p>
 </footer>
 
-<script src="js/script.js"></script>
 <script>
-// Acordeón simple
-document.querySelectorAll('.acordeon-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('active');
-    const content = btn.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-  });
+// Activar fade-in
+document.querySelectorAll('.fade-in-section').forEach(section => {
+  section.classList.add('visible');
 });
+
+// Funciones interactivas
+function verificarCompletarPalabra() {
+  const w1 = document.getElementById("word1").value.toLowerCase();
+  const w2 = document.getElementById("word2").value.toLowerCase();
+  const w3 = document.getElementById("word3").value.toLowerCase();
+  if (w1 === "asertividad" && w2 === "empatía" && w3 === "fraternidad") {
+    document.getElementById("resultado-completar").textContent = "¡Correcto!";
+  } else {
+    document.getElementById("resultado-completar").textContent = "Revisa tus respuestas.";
+  }
+}
+
+function verificarValores() {
+  const v1 = document.getElementById("valor1").value.toLowerCase();
+  const v2 = document.getElementById("valor2").value.toLowerCase();
+  const v3 = document.getElementById("valor3").value.toLowerCase();
+  if (v1 === "honestidad" && v2 === "respeto" && v3 === "solidaridad") {
+    document.getElementById("resultado-valores").textContent = "¡Bien hecho!";
+  } else {
+    document.getElementById("resultado-valores").textContent = "Revisa tus respuestas.";
+  }
+}
+
+function verificarProximo() {
+  const correcto = document.getElementById("desconocido").checked && document.getElementById("diferente").checked;
+  const incorrecto = document.getElementById("solo-cae-bien").checked;
+  if (correcto && !incorrecto) {
+    document.getElementById("resultado-proximo").textContent = "¡Correcto!";
+  } else {
+    document.getElementById("resultado-proximo").textContent = "Revisa tus opciones.";
+  }
+}
+
+function verificarComunicacion() {
+  const r = document.getElementById("respuesta-cultura").value.toLowerCase();
+  document.getElementById("resultado-cultura").textContent = (r === "armenia") ? "¡Correcto!" : "No es la respuesta correcta.";
+}
+
+function verificarVerdaderoFalso() {
+  const vf1 = document.getElementById("vf1").value.toLowerCase();
+  const vf2 = document.getElementById("vf2").value.toLowerCase();
+  const vf3 = document.getElementById("vf3").value.toLowerCase();
+  if (vf1 === "falso" && vf2 === "verdadero" && vf3 === "verdadero") {
+    document.getElementById("resultado-vf").textContent = "¡Perfecto!";
+  } else {
+    document.getElementById("resultado-vf").textContent = "Revisa tus respuestas.";
+  }
+}
 </script>
 
 </body>
