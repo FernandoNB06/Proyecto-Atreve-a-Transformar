@@ -53,6 +53,8 @@
       <p><strong>Segundo Parcial – 2 de junio de 2025 – Semestre 1/2025</strong></p>
       <!-- Botón para descargar la carátula oficial -->
       <a href="Caratula%20Oficial%20de%20Vínculos%20que%20transforman.pdf" download class="recurso-btn">Descargar Carátula Oficial</a>
+      <a href="#" class="recurso-btn" onclick="mostrarCaratula(event)">Ver Carátula</a>
+
     </section>
 
     <!-- Sobre los autores -->
@@ -83,5 +85,19 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <div id="lightbox-caratula" class="lightbox">
+  <img src="caratula.PNG" alt="Carátula del proyecto" />
+</div>
+<script>
+  function mostrarCaratula(event) {
+    event.preventDefault();
+    document.getElementById('lightbox-caratula').classList.add('active');
+  }
+
+  document.getElementById('lightbox-caratula').addEventListener('click', function() {
+    this.classList.remove('active');
+  });
+</script>
+
 </body>
 </html>
